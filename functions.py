@@ -14,11 +14,11 @@ def getmyroboconstats():
     url = "https://my.roboconoxon.org.uk/api/v1/dashboard/stats"
     payload = {}
     headers = {
-        'Authorization': 'Bearer robocon_sk_0hs7u17aoceknbwc'
+        'Authorization': 'Bearer robocon_sk_sur2mqyv4mumwg42'
     }
 
     response = requests.request("GET", url, headers=headers, data=payload)
-    print(response.text)
+    #print("Status Code",response) #For Debugging
     data = json.loads(response.text)
 
     return RoboconStats(
