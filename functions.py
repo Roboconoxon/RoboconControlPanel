@@ -18,6 +18,7 @@ def getmyroboconstats():
     }
 
     response = requests.request("GET", url, headers=headers, data=payload)
+    print(response.text)
     data = json.loads(response.text)
 
     return RoboconStats(
